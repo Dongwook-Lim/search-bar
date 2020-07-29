@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0; /* border 밖의 line */
+  bottom: 0;
+  box-sizing: border-box; /* border까지가 box */
+}
+
+body {
+  height: 100vh; /*view port의 높이값 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 55px; /* 줄간격 */
+  background: #ba3f6a;
+  border-radius: 25px;
+  overflow: hidden; /* content가 box를 넘어가면 숨긴다 */
+  box-shadow: 0 0 10px #636263; /* right botton blur spread */
+  transition: 0.8s; /* hover로 인한 변화에 duration을 준다 */
+  cursor: pointer;
+  animation: appear 2s; /* search-bar가 나타날 때의 animation을 준다 */
+}
+
+/* animation의 appear를 어떻게 제어할 것인가? */
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.search-bar:hover {
+  width: 300px;
+}
+
+.search-bar:hover i {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+}
+
+.search-bar:hover input {
+  width: 230px;
+  height: 32px;
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: larger; /* Sets the font-size to a larger size than the parent element */
+}
+
+i {
+  color: white;
+  font-size: 22px;
+}
+
+input {
+  display: none; /* transition으로 변화할 때 보이지 않게 한다 */
+}
