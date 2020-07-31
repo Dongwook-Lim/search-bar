@@ -5,3 +5,9 @@ function hello() {
     alert("Please say 'hello' to me :)");
   }
 }
+
+function enter() {
+  if (event.keyCode == 13) {
+    hello();
+  }
+}

@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   outline: 0; /* border 밖의 line */
-  bottom: 0;
   box-sizing: border-box; /* border까지가 box */
 }
 
